@@ -24,20 +24,19 @@
           <th>User</th>
           <th>Date</th>
           <th>Comment</th>
-          <!-- <th>Rating</th> -->
         </tr>
       </thead>
       <tbody>
         
-        <% match.comments.forEach(function(m) { %>
+        <% match.comments.forEach(function(c) { %>
           <tr>
-            <td class="comment-user"><img alt="avatar" src="<%= m.userAvatar %>" referrerpolicy="no-referrer" ><%= m.userName %></td>
-            <td><%= m.createdAt.toLocaleDateString() %></td>
-            <td><%= m.content %></td>
+            <td class="comment-user"><img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" ><%= c.userName %></td>
+            <td><%= c.createdAt.toLocaleDateString() %></td>
+            <td><%= c.content %></td>
            
             <td>
-              <% if (user?._id.equals(m.user)) { %>
-                <form action="/comments/<%= m._id %>?_method=DELETE" method="POST">
+              <% if (user?._id.equals(c.user)) { %>
+                <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
                   <button type="submit">X</button>
                 </form>
               <% } %>
@@ -46,7 +45,7 @@
         <% }); %>
         <tr>
           <td colspan="3"></td>
-          <!-- <td><strong><%= (total / match.comments.length).toFixed(1) %></strong></td> -->
+          
         </tr>
       </tbody>
     </table>

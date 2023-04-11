@@ -22,9 +22,11 @@ async function create(req, res) {
 }
 
 async function deleteComment(req, res) {
+    console.log(req.params)
     const match = await Match.findOne({ 'comments._id': req.params.id, 'comments.user': req.user._id})
+    console.log(match)
     if(!match) return res.redirect('/matches')
-    match.reviews.remove(req.params.id)
+    match.comments.remove(req.params.id)
     await match.save()
     res.redirect(`/matches/${match._id}`)
 }
