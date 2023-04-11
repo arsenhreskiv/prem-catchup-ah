@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/matches" method="POST">
+  <label>Home Team:</label>
+  <input type="text" name="homeTeam">
+  <label>Score:</label>
+  <input type="number" name="scoreOne">
+  -
+  <input type="number" name="scoreTwo">
+  <label>Away Team</label>
+  <input type="text" name="awayTeam">
+  <label>Game Week:</label>
+  <input type="text" name="gameWeek">
+  <input type="submit" value="Add Match">
+</form>
+
+<%- include('../partials/footer') %>
+<!-- <select name="mpaaRating">
+    <option value="G">G</option>
+    <option value="PG">PG</option>
+    <option value="PG-13">PG-13</option>
+    <option value="R">R</option>
+  </select> -->
