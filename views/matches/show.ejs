@@ -6,3 +6,53 @@
   <div>Away Team: <%= match.awayTeam %></div>
   <div>Game Week: <%= match.gameWeek %></div>
 </section>
+
+<br><br><h2>Comments</h2>
+<% if (user) { %>
+<form id="add-comment-form" method="POST"
+  action="/matches/<%= match._id %>/comments">
+  <label>Comment:</label>
+  <textarea name="content"></textarea>
+  <input type="submit" value="Add Comment">
+</form>
+<% } %>
+
+<% if (match.comments.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Date</th>
+          <th>Comment</th>
+          <!-- <th>Rating</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        
+        <% match.comments.forEach(function(m) { %>
+          <tr>
+            <td class="comment-user"><img alt="avatar" src="<%= m.userAvatar %>" referrerpolicy="no-referrer" ><%= m.userName %></td>
+            <td><%= m.createdAt.toLocaleDateString() %></td>
+            <td><%= m.content %></td>
+           
+            <td>
+              <% if (user?._id.equals(m.user)) { %>
+                <form action="/comments/<%= m._id %>?_method=DELETE" method="POST">
+                  <button type="submit">X</button>
+                </form>
+              <% } %>
+            </td>
+          </tr>
+        <% }); %>
+        <tr>
+          <td colspan="3"></td>
+          <!-- <td><strong><%= (total / match.comments.length).toFixed(1) %></strong></td> -->
+        </tr>
+      </tbody>
+    </table>
+  <% } else { %>
+    <h5>No Comments Yet</h5>
+  <% } %>
+    
+  <%- include('../partials/footer') %>
+  

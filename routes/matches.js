@@ -15,5 +15,3 @@ router.get('/:id', matchesCtrl.show)
 router.post('/', ensureLoggedIn, matchesCtrl.create)
 
 module.exports = router;
-
-module.exports = router;

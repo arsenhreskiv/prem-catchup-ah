@@ -19,10 +19,7 @@ function newMatch(req, res) {
 
 async function show(req,res) {
     const match = await Match.findById(req.params.id)
-    res.render('matches/show', {
-        title: 'Match',
-        match
-    })
+    res.render('matches/show', { title: 'Match', match })
 }
 
 async function create(req, res) {
