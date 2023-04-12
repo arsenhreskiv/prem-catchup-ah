@@ -33,14 +33,15 @@
             <td class="comment-user"><img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" ><%= c.userName %></td>
             <td><%= c.createdAt.toLocaleDateString() %></td>
             <td><%= c.content %></td>
-           
+            <% if (user?._id.equals(c.user)) { %>
+            <td ><a href="/matches/<%= match._id %>/comments/<%= c._id %>">Edit</a></td>
             <td>
-              <% if (user?._id.equals(c.user)) { %>
                 <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
                   <button type="submit">X</button>
                 </form>
-              <% } %>
+            
             </td>
+            <% } %>
           </tr>
         <% }); %>
         <tr>

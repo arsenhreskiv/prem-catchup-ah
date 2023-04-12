@@ -4,6 +4,8 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <nav>
+      <a href="/" <%- title === 'Home Page' ? 'class="active"' : '' %>>HOME PAGE</a>
+      |
       <a href="/matches" <%- title === 'All Matches' ? 'class="active"' : '' %>>ALL MATCHES</a>
     <% if (user) { %>
       |
