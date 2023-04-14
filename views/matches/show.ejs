@@ -1,10 +1,18 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-  <div>Home Team: <%= match.homeTeam %></div>
-  <div>Score: <%= match.scoreOne %> - <%= match.scoreTwo %></div>
-  <div>Away Team: <%= match.awayTeam %></div>
-  <div>Game Week: <%= match.gameWeek %></div>
+  <div class="headers">
+    <div>Home Team: </div> 
+    <div>Score: </div> 
+    <div>Away Team: </div> 
+    <div>Game Week:</div>
+  </div>
+  <div class="categories">
+    <div><%= match.homeTeam %></div>
+    <div><%= match.scoreOne %> - <%= match.scoreTwo %></div>
+    <div><%= match.awayTeam %></div>
+    <div><%= match.gameWeek %></div>
+  </div>
 </section>
 
 <br><br><h2>Comments</h2>

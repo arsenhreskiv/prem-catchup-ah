@@ -1,16 +1,16 @@
 <%- include('../partials/header') %>
 
 <table id="list">
-  <thead>
-    <tr>
+  <thead >
+    <tr class="headers">
       <th>Home Team</th>
       <th>Score</th>
       <th>Away Team</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody >
     <% matches.forEach(function(m) { %>
-      <tr>
+      <tr class="categories">
         <td><%= m.homeTeam %></td>
         <td><%= m.scoreOne %> - <%= m.scoreTwo %> </td>
         <td><%= m.awayTeam %></td>
@@ -18,6 +18,6 @@
       </tr>
       <% }); %>
     </tbody>
-  </table>
+</table>
   
 <%- include('../partials/footer') %>

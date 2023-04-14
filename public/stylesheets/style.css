@@ -1,10 +1,27 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /* background-image: 'https://i.imgur.com/na8QZ1e.jpg'; */
+  background-color: #3fa95a;
 }
 
 a {
   color: #00B7FF;
+}
+
+.headers {
+  padding: 20px;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.categories {
+  padding: 15px;
+  font-size: 25px;
+  display: flex;
+  /* justify-content: center; */
+  justify-content: space-around;
 }
 
 .login {
@@ -20,7 +37,7 @@ a {
 
 .comment-user {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -30,10 +47,12 @@ a {
 }
 
 #add-comment-form {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  /* grid-template-columns: auto auto;
   grid-gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; */
 }
 
 #add-comment-form input[type="submit"] {
