@@ -25,7 +25,8 @@ Premier League Catchup, or Prem catchup is a app where users can come together t
 # Getting Started
 <div align="center">
    <h1> Premier League Catchup </h1>
-   <h3><a href=https://prem-catchup-ah.herokuapp.com> Visit the Prem Catchup website<h3>                             
+   <h3><a href=https://prem-catchup-ah.herokuapp.com> Visit the Prem Catchup website<h3>    
+   <h4><a href=https://trello.com/b/Z95Jyx8T/project-2-premier-league-catch-up>My Trello Board</h4>                         
 </div>
 <details open>
 <ol>
